@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TaskListComponent } from './components/task-list/task-list.component'; // ✅ Import standalone component
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true, // ✅ Mark as standalone
+  imports: [TaskListComponent], // ✅ Use TaskListComponent directly
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'enpal-frontend';
